@@ -7,7 +7,7 @@ gunicorn==20.0.4
 isort==5.5.2
 lazy-object-proxy==1.4.3
 mccabe==0.6.1
-mysqlclient @ file:///C:/Users/60010382/Documents/Coding/inventory/inventory/mysqlclient-1.4.6-cp38-cp38-win_amd64.whl
+mysqlclient 
 psycopg2==2.8.6
 pylint==2.6.0
 pytz==2020.1
