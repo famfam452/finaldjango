@@ -4,14 +4,12 @@ from .models import Product
 # Create your views here.
 
 
-def index(request):
-    # html = "<html><body>Hello</body></html>"
-    # return HttpResponse(html)
-    products = Product.objects.all()
-    return render(request,'frontend/index.html', {'products':products})
+# def index(request):
+#     products = Product.objects.all()
+#     return render(request,'frontend/index.html', {'products':products})
 
-def about(request):
-    return render(request,'frontend/about.html')
+# def about(request):
+#     return render(request,'frontend/about.html')
 
-def contact(request):
-    return render(request,'frontend/contact.html')
+# def contact(request):
+#     return render(request,'frontend/contact.html')

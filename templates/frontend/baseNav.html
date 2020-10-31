@@ -1,4 +1,5 @@
 {% load static %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,8 +13,16 @@
     <script src="{% static './lib/bootstrap/js/bootstrap.min.js' %}"></script>
 </head>
 <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'index' %}">Home</a>
+        {% if nameof %}
+        <span class="navbar-brand mb-0 h1 middleNav">{{ nameof }}'s Flashcard</span>
+        {% endif %}
+    </nav>
     {% block content %}
     {% endblock %}
 
+
+    
 </body>
 </html>

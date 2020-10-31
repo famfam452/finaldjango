@@ -1,13 +1,31 @@
 {% extends 'frontend/base.html' %}
 {% block title %}Contact{% endblock %}
 {% block content %}
-<div class="jumbotron">
-    <h1 class="display-3">Contact Page</h1>
-    <p class="lead">Jumbo helper text</p>
-    <hr class="my-2">
-    <p>More info</p>
-    <p class="lead">
-        <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
-    </p>
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Title</h4>
+          <p class="card-text">Body</p>
+          <table class="table">
+              <thead>
+                  <tr>
+                      {% for i in Attribute %}
+                      <th>{{ i }}</th>
+                      {% endfor %}
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for row in DataInstance %}
+                  <tr>
+                      {% for x in row %}
+                      <td>{{ x }}</td>
+                      {% endfor %}
+                  </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+        </div>
+      </div>
 </div>
+
 {% endblock %}
