@@ -4,12 +4,13 @@
 <div class="container mt-5">
     <form action="/csv-upload" method="post" enctype="multipart/form-data">
         {% csrf_token %}
+        <input type="hidden" value="{{ nameof }}" name="nameOf">
         <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
             </div>
             <div class="custom-file">
-              <input type="file" class="custom-file-input" id="inputGroupFile01" accept=".csv" name="inputGroupFile01">
+              {{ fileform }}
               <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
             </div>
           </div>

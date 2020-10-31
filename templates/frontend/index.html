@@ -1,16 +1,17 @@
 {% extends 'frontend/base.html' %}
 {% block title %}Home{% endblock %}
 {% block content %}
-<form action="/next" method="POST">
+<form action="" method="POST">
     {% csrf_token %}
     <div class="midpost">
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="button-addon2" id="your_name" type="text" name="your_name" value="{{ current_name }}">
+            {{ form }}
             <div class="input-group-append">
             <button class="btn btn-outline-secondary" type="submit" id="button-addon2">GO</button>
             </div>
         </div>
     </div>
+    
 </form>
 
 {% endblock %}
